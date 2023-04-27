@@ -1,0 +1,23 @@
+{% include "header.html" %}
+
+<section class="checkout">
+      <div class="product">
+
+        <img src="{{img_cars[img]}}" width="500px" height="700px" alt="The cover of Stubborn Attachments" />
+        <div class="description">
+
+          <h3>{{cars.name}}</h3>
+          <h5>€ {{cars.price}}</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit"  class="btn btn-warning" id="checkout-button">Checkout</button>
+      </form>
+</section>
+
+
+
+{% include "footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+{% include "header.html" %}
+<section class="showroom">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[0] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 1: %}
+        <h5 class="card-title">{{ car.name }}</h5>
+        <p class="card-text">Dodge Challenger SRT Hellcat Redeye. With a name like that, this car could have the 105-horsepower engine and 14-inch wheels from a 2002 Daewoo Lanos and still be super cool. But of course, the Hellcat is indeed the biggest, baddest Challenger around. The lineup starts with the "regular" SRT Hellcat, which has a supercharged V8 good for 717 hp.</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" class="btn btn-warning" href="{{url_for('checkout', id=car.id)}}"><small class="text-muted">+ Add basket € {{ car.price }}</small>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[1] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 2: %}
+        <h5 class="card-title">{{ car.name }}</h5>
+        <p class="card-text">Fino a 165/224 kW/CV[1] Potenza nominale Da 4,0 secondi da 0 a 100 km/h 4,7-7,6 litri Consumo (combinato) Fino a 250km/h Velocità massima.CLA non ha mai seguito una moda. Il suo design è un mondo a sé. Scopri le caratteristiche uniche di CLA Coupé: dal frontale unico con mascherina Matrix, al tetto scorrevole panoramico fino ai fari MULTIBEAM LED.</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" class="btn btn-warning" href="{{url_for('checkout', id=car.id)}}"><small class="text-muted">+ Add basket € {{car.price}}</small>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[2] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 3: %}
+        <h5 class="card-title">{{car.name}}</h5>
+        <p class="card-text">BMW X5 xDrive40i:
+Consumo di carburante, in ciclo misto WLTP in l/100 km: 9,9 - 8,5
+Emissioni di CO2 in ciclo misto WLTP in g/km: 224 - 193. Potente motore a combustione BMW TwinPower Turbo 6 cilindri da 280 kW (381 CV)
+Caratteristiche di guida ottimali su ogni terreno grazie alle quattro modalità di guida Offroad del pacchetto xOffroad optional</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" class="btn btn-warning" href="{{url_for('checkout', id=car.id)}}"><small class="text-muted">+ Add basket € {{car.price}}</small>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+     <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 mb-3">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[3] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 4: %}
+        <h5 class="card-title">{{car.name}}</h5>
+        <p class="card-text">Comandi del cambio al volante (solo trasmissione automatica)
+Climatizzatore automatico bi zona
+Console centrale con bracciolo
+Terminale di scarico Quad Chrome (con Active Valve Performance)
+Specchietti retrovisori in tinta carrozzeria
+Pony Badge sulla griglia frontale</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" class="btn btn-warning" href="{{url_for('checkout', id=car.id)}}"><small class="text-muted">+ Add basket € {{car.price}}</small></a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[4] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 5: %}
+        <h5 class="card-title">{{car.name}}</h5>
+        <p class="card-text">Potenza in kW(CV) a giri/min: 225 (306)/5.000–6.250
+          Accelerazione 0 – 100 km/h in s: 4,9–4,8*
+          Consumo di carburante, in ciclo misto, in l/100 km: 7,8–7,1 Emissioni di CO2 in ciclo misto in g/km: 177–162</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" class="btn btn-warning" href="{{url_for('checkout', id=car.id)}}"><small class="text-muted">+ Add basket € {{car.price}}</small>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ cars[5] }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        {% for car in cars_info: %}
+        {% if car.id == 6: %}
+        <h5 class="card-title">{{car.name}}</h5>
+        <p class="card-text">Emissioni di CO2 nel ciclo combinato1: 188–183 g/km
+
+Consumo di carburante nel ciclo combinato1: 8,3–8,1 l/100km
+
+I dati relativi al consumo di carburante e alle emissioni di CO₂ indicati nelle gamme dipendono dal set di pneumatici/cerchi utilizzato..</p>
+      </div>
+      <div class="card-footer">
+        <a type="button" href="{{url_for('checkout', id=car.id)}}" class="btn btn-warning"><small class="text-muted">+ Add basket € {{car.price}}</small></a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+{% include "footer.html" %}
+
+</body>
+</html>
